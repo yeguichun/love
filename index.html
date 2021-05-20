@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白相册</title>
+    <style>
+        body{
+            margin: 0;
+           background:url('./mm/10.jpg');
+           
+        }
+        .box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            /* border: 3px solid #000; */
+            /* background: pink; */
+            margin: 150px auto;
+            /* transform: translateY(100px); */
+            /* transition: all 2s;     动画 */
+            transform: rotateX(50deg) rotateY(30deg);      /*延X,Y轴移动*/
+            transform-style: preserve-3d;      /*启用3D*/
+            animation: rotate 10s linear infinite;
+        }
+        @keyframes rotate{
+            0%{
+
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        .box span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid #000000; */
+        }
+        .box span img{
+            width: 100%;
+            height: 100%;
+        } 
+        .box span:nth-of-type(1){
+            /* background-color: pink; */
+            transform: translateZ(50px);
+        }
+        .box span:nth-of-type(2){
+            /* background-color: pink; */
+            transform: translateZ(-50px);
+        }
+        .box span:nth-of-type(3){
+            /* background-color: greenyellow; */
+            transform: translateX(-50px) rotateY(90deg);
+        }
+        .box span:nth-of-type(4){
+            /* background-color: greenyellow; */
+            transform: translateX(50px) rotateY(90deg);
+        }
+        .box span:nth-of-type(5){
+            /* background-color: peru; */
+            transform: translateY(-50px) rotateX(90deg);
+        }
+        .box span:nth-of-type(6){
+            /* background-color: peru; */
+            transform: translateY(50px) rotateX(90deg);
+        }
+        .box div{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+            width:100%;
+            height:100%;
+            /* border: 1px solid #000000; */
+            transition: all .6s;
+            opacity: .6;
+        }
+        .box div img{
+            width: 100%;
+            height: 100%;
+        } 
+        .box div:nth-of-type(1){
+            /* background-color: pink; */
+            transform: translateZ(100px);
+        }
+        .box div:nth-of-type(2){
+            /* background-color: pink; */
+            transform: translateZ(-100px);
+        }
+        .box div:nth-of-type(3){
+            /* background-color: greenyellow; */
+            transform: translateX(-100px) rotateY(90deg);
+        }
+        .box div:nth-of-type(4){
+            /* background-color: greenyellow; */
+            transform: translateX(100px) rotateY(90deg);
+        }
+        .box div:nth-of-type(5){
+            /* background-color: peru; */
+            transform: translateY(-100px) rotateX(-90deg);
+        }
+        .box div:nth-of-type(6){
+            /* background-color: peru; */
+            transform: translateY(100px) rotateX(-90deg);
+        }
+        /*过渡*/
+        .box:hover div:nth-of-type(1){
+            transform: translateZ(200px);
+            opacity: .9;/*透明*/
+
+        }
+        .box:hover div:nth-of-type(2){
+            transform: translateZ(-200px);
+            opacity: .9;
+
+        }
+        .box:hover div:nth-of-type(3){
+            transform: translateX(-200px) rotateY(90deg);
+            opacity: .9;
+
+        }
+        .box:hover div:nth-of-type(4){
+            transform: translateX(200px) rotateY(90deg);
+            opacity: .9;
+
+        }
+        .box:hover div:nth-of-type(5){
+            transform: translateY(-200px) rotateX(-90deg);
+            opacity: .9;
+
+        }
+        .box:hover div:nth-of-type(6){
+            transform: translateY(200px) rotateX(-90deg);
+            opacity: .9;
+
+        }
+        
+       /* .back1{
+           position: absolute;
+           top: 0px;
+
+           width: 100%;
+           height: 100%;
+           background: pink;
+
+       } */
+       .lm{
+           font-size: 150px;
+           position: absolute;
+       }
+      .love{
+          position: absolute;
+          left: 26%;
+          bottom: 16%;
+         
+      }
+      .love span:nth-child(1){
+          animation: color 3s linear infinite;
+          font-size: 100px;
+      }
+      .love span:nth-child(2){
+          animation: color 2s linear infinite;
+          font-size: 80px;
+          /* margin-left: 80px; */
+      }
+      .love span:nth-child(3){
+          animation: color 1.5s linear infinite;
+          font-size: 80px;
+      }
+      .love span:nth-child(4){
+          animation: color 2.5s linear infinite;
+          font-size: 80px;
+      }
+      .love span:nth-child(5){
+          animation: color 1s linear infinite;
+          font-size: 80px;
+          margin-right: 30px;
+      }
+      .love span:nth-child(6){
+          animation: color 2.5s linear infinite;
+          font-size: 100px;
+      }
+
+      @keyframes color{
+          0%{
+              color: #f5834a;
+          }
+          25%{
+              color: #3ed1fd;
+          }
+          50%{
+              color: #f94562;
+          }
+          75%{
+              color: #c7aa18;
+          }
+          100%{
+              color: #c7124a;
+          }
+      }
+      .heart{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 10px auto;
+          
+        }
+        .heart:before{
+            /* float: left; */
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 139px;
+            left: 14px;
+            background-color: red;
+            border-radius:50% 50% 16px 0;
+            transform: rotate(-45deg);
+        }
+        .heart:after{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 139px;
+            background-color: red;
+            border-radius:50% 50% 0 13px;
+            transform: rotate(45deg) translateX(30px) translateY(-31px);
+            /* left: 0;
+            top: 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="back1"></div> -->
+    <!-- <div class="heart"></div> -->
+    <!-- <div class="love">
+        <span></span>
+        <span>L</span>
+        <span>O</span>
+        <span>V</span>
+        <span>E</span>
+        <span></span>
+       
+    </div> -->
+    <div class="box">
+       <span><img src="./mm/3.jpg" alt=""></span>
+       <span><img src="./mm/4.jpg" alt=""></span>
+       <span><img src="./mm/8.jpg" alt=""></span>
+       <span><img src="./mm/9.jpg" alt=""></span>
+       <span><img src="./mm/2.jpg" alt=""></span>
+       <span><img src="./mm/6.jpg" alt=""></span>
+
+       <div><img src="./mm/7.jpg"></div>
+       <div><img src="./mm/6.jpg"></div>
+       <div><img src="./mm/2.jpg"></div>
+       <div><img src="./mm/1.jpg" alt=""></div>
+       <div><img src="./mm/9.jpg" alt=""></div>
+       <div><img src="./mm/5.jpg" alt=""></div>
+    
+    </div>
+</body>
+
+</html>
